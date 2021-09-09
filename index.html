@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>The Claw Schedule</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.css"
+		/>
+
+		<!-- If you use the default popups, use this. -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.css"
+		/>
+	</head>
+	<body>
+		<h1>The Claw Schedule</h1>
+		<div id="loader" class="loader show">
+			<div class="lds-ring">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<p>Please wait, fetching The Claw Team schedules</p>
+		</div>
+		<div id="menu">
+			<span id="menu-navi">
+				<button
+					type="button"
+					class="btn btn-default btn-sm move-today"
+					data-action="move-today"
+				>
+					Today
+				</button>
+				<button
+					type="button"
+					class="btn btn-default btn-sm move-day"
+					data-action="move-prev"
+				>
+					<i class="calendar-icon ic-arrow-line-left" data-action="move-prev"></i>
+				</button>
+				<button
+					type="button"
+					class="btn btn-default btn-sm move-day"
+					data-action="move-next"
+				>
+					<i class="calendar-icon ic-arrow-line-right" data-action="move-next"></i>
+				</button>
+			</span>
+			<span id="renderRange" class="render-range"></span>
+		</div>
+
+		<div id="calendar"></div>
+
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="https://uicdn.toast.com/tui.code-snippet/v1.5.2/tui-code-snippet.min.js"></script>
+		<script src="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.min.js"></script>
+		<script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.min.js"></script>
+		<script src="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/chance/1.0.13/chance.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
